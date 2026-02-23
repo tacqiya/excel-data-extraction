@@ -1,145 +1,95 @@
-/******************* TABLE *****************/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; }
-
 body {
-  display: flex;
-  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: block;
   align-items: center;
-  min-height: 100vh; }
+}
 
-/* TABLE Team */
-.table-widget {
-  border-radius: 1rem;
-  background: #FFFFFF;
-  padding: 1.5rem;
-  border: 2px solid #EDEEF1;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-  text-align: left;
-  overflow-x: auto; }
-  .table-widget table {
-    max-width: fit-content;
-    border-collapse: collapse; }
-  .table-widget caption {
-    font-size: 1.12rem;
-    font-weight: 700;
-    text-align: left;
-    margin: 0.5rem 0px; }
-  .table-widget th {
-    padding: 1.25rem 1rem;
-    font-size: 0.875rem;
-    color: #A0A7B1; }
-  .table-widget thead {
-    border-top: 2px solid #EDEEF1; }
-  .table-widget tfoot {
-    margin-top: 1rem;
-    border-top: 2px solid #EDEEF1; }
-  .table-widget td {
-    padding: 0.5rem 1rem;
-    vertical-align: middle; }
-  .table-widget tbody tr {
-    cursor: pointer; }
-    .table-widget tbody tr:nth-child(odd) {
-      background: #f6f9ff; }
-    .table-widget tbody tr:hover {
-      background: #e2ecff; }
+h2 {
+  color: #fff;
+}
 
-.table-row-count {
-  font-size: 0.8rem;
-  font-weight: 700;
-  background: #F1F2F6;
-  padding: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-  margin-left: 1rem;
-  border-radius: 0.5rem; }
+/* Table wrapper */
+.table-container {
+  width: 100%;
+  backdrop-filter: blur(12px);
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  display: inline-table;
+}
 
-.team-member-profile {
-  display: flex;
-  gap: 1rem;
-  align-items: center; }
-  .team-member-profile img {
-    width: 3.125rem;
-    height: 3.125rem;
-    border-radius: 50%;
-    object-fit: cover; }
+/* Table */
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #000;
+}
 
-.profile-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem; }
+/* Body */
+.modern-table td {
+  padding: 10px;
+  font-size: 14px;
+}
 
-.profile-info__name {
-  font-weight: 700;
-  white-space: nowrap; }
+.modern-table tr:nth-of-type(1){
+  background: lightblue;
+  font-weight: bold;
+}
 
-.status {
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  font-weight: 700; }
+.modern-table tr:nth-of-type(1):hover {
+  background: lightblue;
+}
 
-.status--active {
-  background: #EAFEF3;
-  color: #2ECC71; }
+/* Row hover animation */
+.modern-table tbody tr {
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
 
-.status--inactive {
-  background: #fff6e5;
-  color: #F4BD50; }
+.modern-table tbody tr:hover {
+  background: rgba(255,255,255,0.08);
+  transform: scale(1.002);
+  border: unset;
+  background-color: rgb(231, 231, 2);
+}
 
-.status--offline {
-  background: #F1F2F6;
-  color: #A0A7B1; }
+.upload-another {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 
-.tags {
-  display: flex;
-  gap: 0.5rem; }
+.upload-another:hover {
+  color: #ddab06;
+}
 
-.tag {
-  padding: 0.5rem;
-  background: #F1F2F6;
-  border-radius: 0.5rem;
-  font-weight: 700; }
-  .tag::first-letter {
-    text-transform: uppercase; }
+form {
+  color: #fff;
+  margin-bottom: 20px;
+}
 
-.tag--design {
-  background: #f4efff;
-  color: #9A84DA; }
+form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #ddab06;
+  color: #fff;
+  cursor: pointer;
+  color: #000;
+}
 
-.tag--QA {
-  color: #DF8FA8;
-  background: #fbdde7; }
+form button:hover {
+  background: #ad8502;
+}
 
-.tag--dev {
-  background: #eaf2ff;
-  color: #739FDC; }
-
-.tag--marketing {
-  background: #fff6e5;
-  color: #F4BD50; }
-
-.table-widget {
-  min-height: 5rem; }
-
-.pagination {
-  list-style-type: none;
-  display: flex;
-  gap: 1rem;
-  padding: 0; }
-  .pagination a {
-    display: block;
-    color: #101824;
-    font-size: 1.3rem;
-    text-decoration: none;
-    font-weight: 700;
-    padding: 0.75rem 1rem;
-    border-radius: 0.5rem; }
-    .pagination a:hover, .pagination a.active {
-      background: #f6f9ff;
-      text-decoration: underline; }
-
-/******************* TABLE *****************/
+form label {
+  margin-right: 10px;
+}
