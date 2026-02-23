@@ -29,12 +29,13 @@ class ExcelController extends Controller
     public function showData()
     {
         $data = session('excel_data', []);
+        $columns = count($data) > 0 ? array_keys($data[0]) : [];
         if (count($data) > 0) {
             $columns = $data[0];  // first row = header
-            $rows = array_slice($data, 1);  // remaining rows
+            // $rows = array_slice($data, 0);  // remaining rows
         } else {
             $columns = [];
-            $rows = [];
+            // $rows = [];
         }
         // dd($columns);
         return view('excel-data', compact('data', 'columns'));
